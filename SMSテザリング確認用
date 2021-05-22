@@ -52,4 +52,4 @@
   
 //これで完成です。Privilegesはaccess local network, internet and nearbydevicesとSMSメッセージの送信と表示の二つだけです。
 //Settingsのhotspot workaroundやその下のBTの項目はExtensionで動きます。バージョンにもよるのかもしれませんけれど他の項目だとエラーが出ます。
-//もう一つのマクロと同時に実行すると上手く動きます。
+//もう一つのマクロと同時に実行すると上手く動くと思います。
