@@ -8,7 +8,7 @@
 
 Flow beginningのINSTALL HOME SCREEN SHORTCUTからショートカットを作成し、
 
-テザリングとテザリング確認用の2つのショートカットを一緒に実行して利用することで、
+SMSテザリングとSMSテザリング確認用の2つのショートカットを一緒に実行して利用することで、
 SMSからAndroidのWi-FiテザリングがRoot無しで操作可能です。
 Privilegesは二つのマクロのテキストメッセージ(SMS)の受信とtethering workaroundに、
 access local network, internet and nearbydevicesとSMSメッセージの送信計4つです。
