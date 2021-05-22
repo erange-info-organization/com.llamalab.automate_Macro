@@ -20,7 +20,7 @@
     //Floe URL
     /*content://com.llamalab.automate.provider/flows/6/statements/1*/
 
-go
+//START
 
 /*平日05:30~13:30まで時間指定をしたい。*/
   if
