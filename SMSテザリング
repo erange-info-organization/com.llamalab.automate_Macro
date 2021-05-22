@@ -1,1 +1,62 @@
+//SMSテザリング
 
+  Flow beginning
+    //options
+    //Titele
+    /*SMSテザリング*/
+
+    //Parallel launch
+      /*Allowparallel launches from this vlokc*/
+    //Hidden
+      /*Don't show in list of startinf points*/
+
+//下記は重要でAndroidのターミナル上でビルドしてショートカットを作成すると予測。以下設定していないところは略します。
+
+  /*INSTALL HOME SCREEN SHORTCUT*/
+
+  //Current values
+    //Floe URL
+    /*hogehoge*/
+
+  /*最後にループするので最後に書きましたが最初に記載します。\n
+  Subroutineｈは全ての最後をinに繋ぎNewを最初のINに繋ぎます。\n
+  マクロをサブルーチン化させループするのに必要だと思います。*/
+
+  Subroutine
+  //Subroutine
+
+  //初めはSMS receivedで発信電話番号等を指定します。
+
+  SMS received
+  //SMS received
+    //Input arguments
+      //Phone number/*hogehoge*/
+  
+  //EnableのWi-Fi hotspot set stateに繋ぎます。
+  
+  Enable Wi-Fi hotspot
+  //Wi-Fi hotspot set state
+    //Input arguments
+      //Wi-Fi hotspot
+        /*on*/
+  
+  //次にもう一つのSMS receivedを作り繋ぎます。
+
+  SMS received
+  //SMS received
+    //Input arguments
+      //Phone number/*hogehoge*/
+
+  //もう一つDisableのWi-Fi hotspot set stateを作り繋ぎます。
+  
+  Disable Wi-Fi hotspot
+  //Wi-Fi hotspot set state
+    //Input arguments
+      //Wi-Fi hotspot
+        /*off*/
+
+  //最後にDisable Wi-Fi hotspotをSubroutineのinへ繋ぎnewを一番最初のSMS receivedへ繋ぎます。
+
+//これで完成です。Privilegeはテキストメッセージ(SMS)の受信とtethering workaroundの二つだけ。
+//Settingsのhotspot workaroundやその下のBTの項目はExtensionで動きます。バージョンにもよるのかもしれませんけれど他の項目だとエラーが出ます。
+//次はWi-Fi hotspotの状態を返信するアプリを作ります。
