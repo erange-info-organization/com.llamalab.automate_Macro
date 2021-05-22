@@ -10,7 +10,7 @@
     //Hidden
       /*Don't show in list of startinf points*/
 
-//下記は重要でAndroidのターミナル上でビルドしてショートカットを作成すると予測。以下設定していないところは略します。
+//下記は重要でAndroidのターミナル上でビルドしてショートカットを作成すると予測。以下設定していない箇所は略します。
 
   /*INSTALL HOME SCREEN SHORTCUT*/
 
@@ -59,4 +59,4 @@
 
 //これで完成です。Privilegeはテキストメッセージ(SMS)の受信とtethering workaroundの二つだけ。
 //Settingsのhotspot workaroundやその下のBTの項目はExtensionで動きます。バージョンにもよるのかもしれませんけれど他の項目だとエラーが出ます。
-//次はWi-Fi hotspotの状態を返信するアプリを作ります。
+//次はWi-Fi hotspotの状態を返信するマクロを作ります。
