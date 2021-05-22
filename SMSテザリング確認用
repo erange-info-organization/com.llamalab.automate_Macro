@@ -1,0 +1,55 @@
+//SMSテザリング確認用
+
+  Flow beginning
+    //options
+    //Titele
+    /*SMSテザリング確認用*/
+
+    //Parallel launch
+      /*Allowparallel launches from this vlock*/
+    //Hidden
+      /*Don't show in list of startinf points*/
+
+//下記は重要でAndroidのターミナル上でビルドしてショートカットを作成すると予測。以下設定していない箇所は略します。
+
+  /*INSTALL HOME SCREEN SHORTCUT*/
+
+  //Current values
+    //Floe URL
+    /*hogehoge*/
+
+  /*最後にループするので最後に書きましたが最初に記載します。\n
+  Subroutineｈは全ての最後をinに繋ぎNewを最初のINに繋ぎます。\n
+  マクロをサブルーチン化させループするのに必要だと思います。*/
+
+  Subroutine
+  //Subroutine
+
+  //初めはWi-Fi hotspot enabledでWi-Fiテザリングの設定がOnかOffかの確認をします。
+  
+  When Wi-Fi hotspot enabled
+  //Wi-Fi hotspot enabled
+  
+  //IF YES(True)の場合、電話番号等とテザリングはOnです。等のメッセージを設定したSMS sendのINに繋ぎます。
+  
+  Send SMS to "+81hogehoge" "テザリングはOnです。"
+  //SMS send
+    //Options
+      //When sent    
+    //Input arguments
+      //Phone number/*+81hogehoge*/
+  
+  //IF NO(eles)の場合、電話番号等とテザリングはOffです。等のメッセージを設定したSMS sendのINに繋ぎます。
+  
+    Send SMS to "+81hogehoge" "テザリングはOffです。"
+  //SMS send
+    //Options
+      //When sent    
+    //Input arguments
+      //Phone number/*+81hogehoge*/
+  
+  //最後に両方とものOKの部分をSubroutineのINへ繋ぎ、SubroutineのNEWを最初のWhen Wi-Fi hotspot enabledのINへ繋ぎます。
+  
+//これで完成です。Privilegesはaccess local network, internet and nearbydevicesとSMSメッセージの送信と表示の二つだけです。
+//Settingsのhotspot workaroundやその下のBTの項目はExtensionで動きます。バージョンにもよるのかもしれませんけれど他の項目だとエラーが出ます。
+//もう一つのマクロと同時に実行すると上手く動きます。
