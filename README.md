@@ -15,9 +15,11 @@ access local network, internet and nearbydevicesとSMSメッセージの送信�
 
 当方の利用環境ではこのマクロはSettingのExtension(Android 5+)以外では動作しませんでした。
 
-
 キャリア純正のNoRoot環境で動くのがとても魅力で下記の作者様に感謝申し上げます。
 
 Automate
-info@llamalab.com
-https://www.reddit.com/r/AutomateUser
+https://play.google.com/store/apps/details?id=com.llamalab.automate
+Support & Feedback
+Reddit: https://www.reddit.com/r/AutomateUser/
+Forum: https://groups.google.com/g/automate-user
+E-mail: info@llamalab.com
