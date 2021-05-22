@@ -6,7 +6,7 @@
     /*SMSテザリング*/
 
     //Parallel launch
-      /*Allowparallel launches from this vlokc*/
+      /*Allowparallel launches from this vlock*/
     //Hidden
       /*Don't show in list of startinf points*/
 
@@ -30,7 +30,7 @@
   SMS received
   //SMS received
     //Input arguments
-      //Phone number/*hogehoge*/
+      //Phone number/＋81*hogehoge*/
   
   //EnableのWi-Fi hotspot set stateに繋ぎます。
   
@@ -45,7 +45,7 @@
   SMS received
   //SMS received
     //Input arguments
-      //Phone number/*hogehoge*/
+      //Phone number/+81*hogehoge*/
 
   //もう一つDisableのWi-Fi hotspot set stateを作り繋ぎます。
   
@@ -55,8 +55,8 @@
       //Wi-Fi hotspot
         /*off*/
 
-  //最後にDisable Wi-Fi hotspotをSubroutineのinへ繋ぎnewを一番最初のSMS receivedへ繋ぎます。
+  //最後にDisable Wi-Fi hotspotをSubroutineのinへ繋ぎNEWを一番最初のSMS receivedへ繋ぎます。
 
-//これで完成です。Privilegeはテキストメッセージ(SMS)の受信とtethering workaroundの二つだけ。
+//これで完成です。Privilegesはテキストメッセージ(SMS)の受信とtethering workaroundの二つだけ。
 //Settingsのhotspot workaroundやその下のBTの項目はExtensionで動きます。バージョンにもよるのかもしれませんけれど他の項目だとエラーが出ます。
-//次はWi-Fi hotspotの状態を返信するマクロを作ります。
+//Wi-Fi hotspotの状態を返信するマクロをSMSテザリング確認用と一緒にご利用下さい。
