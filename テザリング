@@ -1,0 +1,170 @@
+
+//未完成
+
+//1
+  //Flow beginning
+  //options
+  //Titele
+  /*テザリング*/
+
+  //Parallel launch
+  /*Allowparallel launches from this vlokc*/
+  //Hidden
+  /*Don't show in list of startinf points*/
+
+//私のコメント下記は重要でAndroidのターミナル上で何かをビルドすると予測以下設定していないところは略します。
+
+  /*INSTALL HOME SCREEN SHORTCUT*/
+
+  //Current values
+    //Floe URL
+    /*content://com.llamalab.automate.provider/flows/6/statements/1*/
+
+go
+
+/*平日05:30~13:30まで時間指定をしたい。*/
+  if
+  When in time window 5:30 8h awake
+  //Time window?
+    //Options
+      //Proceed
+        /*Exact*/
+    //input arguments
+      //Duration
+        /*8h 0m*/
+      //Time of day
+        /*5:30*/
+      //weekdays
+        /*Manday,Tuesday,Wednesday,Thursday,Friday*/
+      //Time zone
+        /*Japan*/
+      //wake up
+        /*Awake device*/
+    
+/*現在位置測位？下記に渡したい。*/
+    When locaion change GPS 300
+    //Location get
+      //Options
+        //proceed
+          /*Proceed*/
+      //Input arguments
+        //Location provider
+          /*GPS*/
+        //Minimum distance
+          /*m 300*/
+          
+      if
+      Pick lovation
+        //Input arguments
+          //Initiak latitude
+            /*hogehoge*/
+          //Initial longitude
+            /*hogehoge*/
+        //Radius selection
+            /*Slect rasius around locarion*/
+        //Default radius
+          /*m 300*/
+        
+      When power source Plugged
+      //Options
+        //Proceed
+          /*When changed*/
+        
+      Vibrate
+      //Input arguents
+        //Vibration pattern
+          /*Error*/
+        
+      Message dialog "Error" "充電ケーブルを繋いで下さい。"
+      //Input arfuments
+        //title
+          /*Error*/
+        //Message
+          /*充電ケーブルを繋いで下さい。*/
+        //Didmiss button
+          /*確認*/
+        //Timeout  
+          /*0h 0m 30s*/
+        //show window
+          /*showwindow diredtly if possible*/  
+          
+      
+        for if
+        Is battery level 0-30
+        //Input arguments
+          //Minimum level
+            /*0*/
+          //Maximum level
+            /*30*/    
+       
+       Message dialog "low バッテリー" "充電ケーブルを繋いで下さい。"
+       //Input arfuments
+        //title
+          /*low バッテリー*/
+        //Message
+          /*充電ケーブルを繋いで下さい。*/
+        //Timeout  
+          /*0h 0m 30s*/
+        //show window
+          /*showwindow diredtly if possible*/
+        
+        else if
+        Is Wi-Fi hotspot enabled
+        
+        Message dialog "テザリングOn" "テザリングはOnです。"
+        //Input arfuments
+          //title
+            /*テザリングOn*/
+          //Message
+            /*テザリングはOnです。*/
+          //Timeout  
+            /*0h 0m 15s*/
+          //show window
+            /*showwindow diredtly if possible*/
+        
+        else if
+        Enabele Wi-Fi hotspot
+        
+        Message dialog "テザリング ON" "テザリングをOnにしました。"
+        //Input arfuments
+          //title
+            /*テザリング ON*/
+          //Message
+            /*テザリングをOnにしました。*/
+          //Timeout  
+            /*0h 0m 15s*/
+          //show window
+            /*showwindow diredtly if possible*/
+        
+        
+        /*バッテリー充電の確認とテザリング*/
+        end if
+    
+      eles if
+      /*ローケーション外確認*/  
+      end if    
+          
+       
+        
+  else if
+    Is Wi-Fi enabled
+                
+    eles if
+        
+    Enable Wi-Fi
+      
+    Message dialog "Wi-Fi ON" "Wi-FiをOnにしました。"
+    //Input arfuments
+      //title
+        /*Wi-Fi ON*/
+      //Message
+        /*Wi-FiをOnにしました。*/
+      //Timeout  
+        /*0h 0m 15s*/
+      //show window
+        /*showwindow diredtly if possible*/
+   end if
+   
+   /*Returnでloopになる様子*/
+   Subroutine
+  
